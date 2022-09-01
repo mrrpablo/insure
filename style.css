@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+:root {
+     --dark-Violet: hsl(256, 26%, 20%);
+     --grayish-Blue: hsl(216, 30%, 68%) ;
+     --very-Dark-Violet: hsl(270, 9%, 17%);
+     --dark-Grayish-Violet: hsl(273, 4%, 51%) ;
+     --very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+h1, h2{
+    font-size: 4em;
+    position: relative;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0;
+    /* padding: 50px; */
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    line-height: 1.7;
+    opacity: .8;
+}
+
+body{
+    font-size: 16px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 1440px;
+}
+
+header{
+    padding: 2em 0;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbars ul{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.navbars ul a{
+    text-transform: uppercase;
+    color: var(--very-Dark-Violet);
+}
+
+.navbars .menu-btn i{
+    cursor: pointer;
+    font-size: 22px;
+    display: none;
+}
+
+#click{
+    display: none;
+}
+
+.active{
+    border: 2px solid var(--very-Dark-Violet);
+    padding: .5em .8em;
+    font-weight: bold;
+}
+
+.active:hover,
+.active:focus{
+    background-color: var(--very-Dark-Violet);
+    color: var(--very-Light-Gray);
+}
+
+.section-one{
+    background-color: var(--dark-Violet);
+    color: var(--very-Light-Gray);
+    position: relative;
+}
+
+.hero-one{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero-one::after{
+    content: '';
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+}
+
+.hero-one::before{
+    content: '';
+    background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    top: 41%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.hero-one-text{
+    width: 40%;
+    margin-top: 10em;
+}
+
+.hero-one-text h1{
+    width: 90%;
+    margin-top: .8em;
+}
+
+.hero-one-text p{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.hero-one-text hr{
+    width: 18%;
+    color: var(--very-Light-Gray);
+}
+
+.hero-one-img{
+   position: relative;
+   right: 8%;
+   top: 150px;
+}
+
+
+.hero-one-text a{
+    color: var(--very-Light-Gray);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn{
+    border: 2px solid var(--very-Light-Gray);
+    padding: .5em .8em;
+    font-weight: bold;  
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: var(--very-Light-Gray);
+    color: #000;
+}
+
+.section-two{
+    margin-top: 15em;
+}
+
+.hero-two hr{
+    width: 8%;
+    color: var(--very-Light-Gray);
+}
+
+.hero-two h1{
+    margin-top: 1em;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4em;
+}
+
+.cards{
+    width: 27%;
+}
+
+.cards h3{
+    margin-top: .8em;
+    margin-bottom: .5em;
+}
+
+.section-three{
+    margin-top: 10em;
+}
+
+.hero-three{
+    background-color: var(--very-Dark-Violet);
+    color: var(--very-Light-Gray);
+    padding: 60px;
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 30%, 100%;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-three-text h2{
+    width: 58%;
+}
+
+.btn-two{
+    border: 1px solid var(--very-Light-Gray);
+    padding: .5em 1.5em;
+    font-weight: bold;
+    color: var(--very-Light-Gray);
+}
+
+.btn-two:hover,
+.btn-two:focus{
+    background-color: var(--very-Light-Gray);
+    color: var(--very-Dark-Violet);
+}
+
+footer{
+    background-color: var(--very-Light-Gray);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 30%, 100%;
+    margin-top: 8em;
+    padding: 3em 0;
+}
+
+.footer-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer hr{
+    margin-top: 1em;
+}
+
+.socials img{
+    margin-right: .8em;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    width: 85%;
+    text-transform: uppercase;
+}
+
+.footer-nav ul li a{
+    color: var(--dark-Violet);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-nav ul li{
+    margin-bottom: .8em;
+}
+
+.footer-nav h4{
+    opacity: .8;
+    margin-bottom: 2.2em;
+}
+
+.contact h4,
+.others h4{
+    margin-bottom: 3.5em;
+}
+
+.contact ul,
+.others ul{
+    margin-bottom: 1em;
+}
+
+@media (max-width: 940px){
+    .navbars ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: var(--very-Dark-Violet);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .navbars ul li{
+        margin: 40px 0;
+    }
+
+    .navbars ul li a{
+        color: var(--very-Light-Gray);
+    }
+
+    .navbars .menu-btn i{
+        display: block;
+    }
+
+    #click:checked ~ ul{
+        left: 0%;
+    }
+
+    #click:checked ~ .menu-btn i::before{
+        content: '\f00d';
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        text-align: center;
+    }
+
+    .hero-one,
+    .hero-two,
+    .hero-three{
+        flex-direction: column;
+    }
+
+    .hero-one-text{
+        order: 1;
+        width: 100%;
+        top: 0;
+        margin-bottom: 5em;
+    }
+
+    .hero-one-text h1{
+        width: 100%;
+        font-size: 3.5em;
+    }
+
+    .hero-one-text p{
+        text-align: center;
+        width: 70%;
+        margin-left: 4em;
+        margin-bottom: 3em;
+    }
+
+    .hero-one-text hr{
+        display: none;
+    }
+
+    .hero-one-img{
+        width: 100%;
+        top: 0;
+    }
+
+    .hero-one-img img{
+        width: 505px;
+    }
+
+    .hero-one::after{
+        content: '';
+        background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        position: absolute;
+        top: 48.8%;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .btn{
+        padding: .8em 3em;
+    }
+
+    .hero-one::before{
+        content: '';
+        background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .hero-two hr{
+       margin-left: 8em;
+       width: 40%;
+       font-weight: 700;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+
+    .cards{
+        width: 68%;
+        margin-bottom: 4em;
+    }
+
+    footer{
+        background-image: url(./images/bg-pattern-footer-mobile.svg);
+        background-position: top center;
+        background-size: 100% auto;
+    }
+
+    .footer-body{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .hero-three{
+        background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+        background-size: 40% auto;
+        background-position: top right;
+        width: 90%;
+        padding: 70px;
+    }
+    .hero-three-text h2{
+        width: 100%;
+        font-size: 2.5em;
+        margin-bottom: 2em;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        text-align: center;
+        margin-left: 2em;
+    }
+    
+    .footer-nav h4{
+        margin-top: 2em;
+    }
+}
